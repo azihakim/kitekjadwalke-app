@@ -54,78 +54,79 @@
 						</button>
 						<div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
 							<ul class="navbar-nav navbar-nav-hover ms-auto">
+								@if (auth()->check())
+									<li class="nav-item dropdown dropdown-hover mx-2">
+										<a class="nav-link ps-2 d-flex cursor-pointer align-items-center font-weight-semibold" id="dropdownMenuDocs"
+											data-bs-toggle="dropdown" aria-expanded="false">
+											{{ Auth::user()->name }} &nbsp;
+											<span class="material-symbols-outlined">
+												person
+											</span>
+										</a>
+										<ul
+											class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg"
+											aria-labelledby="dropdownMenuDocs">
+											<div class="d-none d-lg-block">
+												<ul class="list-group">
+													<li class="nav-item list-group-item border-0 p-0">
+														<form method="POST" action="{{ route('logout') }}">
+															@csrf
+															<a class="dropdown-item py-2 ps-3 border-radius-md" href="route('logout')"
+																onclick="event.preventDefault();
+                                                            this.closest('form').submit();">Log
+																Out</a>
+														</form>
+													</li>
+												</ul>
+											</div>
 
-								<li class="nav-item dropdown dropdown-hover mx-2">
-									<a class="nav-link ps-2 d-flex cursor-pointer align-items-center font-weight-semibold" id="dropdownMenuDocs"
-										data-bs-toggle="dropdown" aria-expanded="false">
-										Docs &nbsp;
-										<span class="material-symbols-outlined">
-											person
-										</span>
-									</a>
-									<ul
-										class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg"
-										aria-labelledby="dropdownMenuDocs">
-										<div class="d-none d-lg-block">
-											<ul class="list-group">
-												<li class="nav-item list-group-item border-0 p-0">
-													<a class="dropdown-item py-2 ps-3 border-radius-md"
-														href=" https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit ">
+											<div class="row d-lg-none">
+												<div class="col-md-12 g-0">
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
 														<h6
 															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-															Log Out</h6>
+															Getting Started</h6>
+														<span class="text-sm">All about overview, quick start, license and contents</span>
 													</a>
-												</li>
-											</ul>
-										</div>
 
-										<div class="row d-lg-none">
-											<div class="col-md-12 g-0">
-												<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
-													<h6
-														class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-														Getting Started</h6>
-													<span class="text-sm">All about overview, quick start, license and contents</span>
-												</a>
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Foundation</h6>
+														<span class="text-sm">See our colors, icons and typography</span>
+													</a>
 
-												<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
-													<h6
-														class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-														Foundation</h6>
-													<span class="text-sm">See our colors, icons and typography</span>
-												</a>
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Components</h6>
+														<span class="text-sm">Explore our collection of fully designed components</span>
+													</a>
 
-												<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
-													<h6
-														class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-														Components</h6>
-													<span class="text-sm">Explore our collection of fully designed components</span>
-												</a>
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Plugins</h6>
+														<span class="text-sm">Check how you can integrate our plugins</span>
+													</a>
 
-												<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
-													<h6
-														class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-														Plugins</h6>
-													<span class="text-sm">Check how you can integrate our plugins</span>
-												</a>
-
-												<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
-													<h6
-														class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-														Utility Classes</h6>
-													<span class="text-sm">For those who want flexibility, use our utility classes</span>
-												</a>
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Utility Classes</h6>
+														<span class="text-sm">For those who want flexibility, use our utility classes</span>
+													</a>
+												</div>
 											</div>
-										</div>
 
-									</ul>
-								</li>
-								<li class="nav-item my-auto ms-3 ms-lg-0">
-
-									<a href="https://www.creative-tim.com/product/material-kit-pro"
-										class="btn  bg-gradient-dark  mb-0 mt-2 mt-md-0">Login</a>
-
-								</li>
+										</ul>
+									</li>
+								@endif
+								@if (!auth()->check())
+									<li class="nav-item my-auto ms-3 ms-lg-0">
+										<a href="{{ route('login') }}" class="btn  bg-gradient-dark  mb-0 mt-2 mt-md-0">Login</a>
+									</li>
+								@endif
 							</ul>
 						</div>
 					</div>
@@ -135,18 +136,24 @@
 		</div>
 	</div>
 	<header class="header-2">
-		<div class="page-header min-vh-75 relative">
-			{{-- <div class="page-header min-vh-75 relative"
-			style="background-image: url('https://palembang.go.id/uploads/Sungai_Musi_sandiyanto_dd61741ef9.jpeg')"> --}}
+		<div class="page-header {{ !auth()->check() ? 'min-vh-75' : 'min-vh-0' }} relative"
+			style="background-image: url('https://palembang.go.id/uploads/Sungai_Musi_sandiyanto_dd61741ef9.jpeg')">
 			<span class="mask bg-gradient-dark opacity-4"></span>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7 text-center mx-auto">
-						<h1 class="text-white font-weight-black pt-3 mt-n5">Material Kit 3</h1>
-						<p class="lead text-white mt-3">Free &amp; Open Source Web UI Kit built over Bootstrap 5. <br> Join over 1.6
-							million developers around the world. </p>
-					</div>
+					@if (!auth()->check())
+						<div class="col-lg-12 text-center mx-auto">
+							<h1 class="text-white font-weight-black pt-3 mt-n5">Kite Jadwalke</h1>
+							<p class="lead text-white mt-3">Agenda Kota Palembang merupakan media yang disediakan oleh Pemerintah Kota
+								Palembang untuk memberikan kemudahan kepada masyarakat untuk mendapatkan informasi mengenai jadwal kegiatan
+								kepala daerah setiap harinya dan event di Pemerintah Kota</p>
+						</div>
+					@else
+						<div class="col-lg-12 text-center mx-auto mt-12">
+						</div>
+					@endif
 				</div>
+
 			</div>
 		</div>
 	</header>
@@ -162,7 +169,7 @@
 		<!-- -------- END Content Presentation Docs ------- -->
 	</div>
 	<footer class="footer pt-5 mt-5">
-		<div class="container">
+		{{-- <div class="container">
 			<div class=" row">
 				<div class="col-md-3 mb-4 ms-auto">
 					<div>
@@ -331,7 +338,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 	</footer>
 	<!--   Core JS Files   -->
 	<script src="{{ asset('vendor/assets/js/core/popper.min.js') }}" type="text/javascript"></script>

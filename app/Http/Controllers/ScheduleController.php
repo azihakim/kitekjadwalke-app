@@ -11,6 +11,9 @@ class ScheduleController extends Controller
     public function index()
     {
         $schedules = Schedule::all();
+        if (!auth()->check()) {
+            $schedules = Schedule::where('state', 1)->get();
+        }
         return view('schedule.index', compact('schedules'));
     }
     public function create()
