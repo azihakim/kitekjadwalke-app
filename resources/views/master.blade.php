@@ -155,7 +155,20 @@
 														<h6
 															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
 															Lambang Daerah</h6>
-														{{-- <span class="text-sm">All about overview, quick start, license and contents</span> --}}
+													</a>
+												</li>
+												<li class="nav-item list-group-item border-0 p-0">
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ route('pimpinan') }}">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Pimpinan Daerah </h6>
+													</a>
+												</li>
+												<li class="nav-item list-group-item border-0 p-0">
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ route('standardpelayanan') }}">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Standard Pelayanan </h6>
 													</a>
 												</li>
 											</ul>

@@ -18,6 +18,12 @@ Route::get('/visimisi', function () {
 Route::get('/lambangdaerah', function () {
     return view('profil.lambangdaerah');
 })->name('lambangdaerah');
+Route::get('/pimpinan', function () {
+    return view('profil.pimpinan');
+})->name('pimpinan');
+Route::get('/standardpelayanan', function () {
+    return view('profil.standardpelayanan');
+})->name('standardpelayanan');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
