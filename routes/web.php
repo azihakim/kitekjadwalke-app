@@ -12,6 +12,12 @@ Route::get('/', [
     \App\Http\Controllers\ScheduleController::class,
     'index'
 ])->name('home');
+Route::get('/visimisi', function () {
+    return view('profil.visimisi');
+})->name('visimisi');
+Route::get('/lambangdaerah', function () {
+    return view('profil.lambangdaerah');
+})->name('lambangdaerah');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

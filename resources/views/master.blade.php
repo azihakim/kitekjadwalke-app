@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('vendor/assets/img/apple-icon.png') }}">
-	<link rel="icon" type="image/png" href="https://palembang.go.id/assets/img/logo.png">
+	<link rel="icon" type="image/png"
+		href="https://upload.wikimedia.org/wikipedia/commons/4/4b/Lambang_Kabupaten_Musi_Banyuasin.png">
 	<title>
 		Kite Jadwalke
 	</title>
@@ -42,7 +43,8 @@
 					<div class="container-fluid px-0">
 						<a class="navbar-brand font-weight-bolder ms-sm-3 text-sm" href="#" rel="tooltip"
 							title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-							<img src="https://palembang.go.id/assets/img/logo.png" style="max-width: 30px"> &nbsp; Kite Jadwalke
+							<img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Lambang_Kabupaten_Musi_Banyuasin.png"
+								style="max-width: 30px"> &nbsp; Kite Jadwalke
 						</a>
 						<button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
 							data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,6 +124,44 @@
 										</ul>
 									</li>
 								@endif
+								<li class="nav-item ms-lg-auto">
+									<a class="nav-link nav-link-icon me-2" href="{{ route('home') }}">
+										<i class="fa fa-github me-1"></i>
+										<p class="d-inline text-sm z-index-1 font-weight-semibold" data-bs-toggle="tooltip"
+											data-bs-placement="bottom">Beranda</p>
+									</a>
+								</li>
+								<li class="nav-item dropdown dropdown-hover mx-2">
+									<a class="nav-link ps-2 d-flex cursor-pointer align-items-center font-weight-semibold" id="dropdownMenuDocs"
+										data-bs-toggle="dropdown" aria-expanded="false">
+										Profile
+										<img src="vendor/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+									</a>
+									<ul
+										class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg"
+										aria-labelledby="dropdownMenuDocs">
+										<div class="d-none d-lg-block">
+											<ul class="list-group">
+												<li class="nav-item list-group-item border-0 p-0">
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ route('visimisi') }}">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Visi & Misi</h6>
+														{{-- <span class="text-sm">All about overview, quick start, license and contents</span> --}}
+													</a>
+												</li>
+												<li class="nav-item list-group-item border-0 p-0">
+													<a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ route('lambangdaerah') }}">
+														<h6
+															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+															Lambang Daerah</h6>
+														{{-- <span class="text-sm">All about overview, quick start, license and contents</span> --}}
+													</a>
+												</li>
+											</ul>
+										</div>
+									</ul>
+								</li>
 								@if (!auth()->check())
 									<li class="nav-item my-auto ms-3 ms-lg-0">
 										<a href="{{ route('login') }}" class="btn  bg-gradient-dark  mb-0 mt-2 mt-md-0">Login</a>
@@ -136,17 +176,17 @@
 		</div>
 	</div>
 	<header class="header-2">
-		<div class="page-header {{ !auth()->check() ? 'min-vh-75' : 'min-vh-0' }} relative"
-			style="background-image: url('https://palembang.go.id/uploads/Sungai_Musi_sandiyanto_dd61741ef9.jpeg')">
+		<div class="page-header {{ !auth()->check() ? 'min-vh-50' : 'min-vh-0' }} relative"
+			style="background-image: url('{{ asset('vendor/img/kantor.png') }}')">
 			<span class="mask bg-gradient-dark opacity-4"></span>
 			<div class="container">
 				<div class="row">
 					@if (!auth()->check())
 						<div class="col-lg-12 text-center mx-auto">
 							<h1 class="text-white font-weight-black pt-3 mt-n5">Kite Jadwalke</h1>
-							<p class="lead text-white mt-3">Agenda Kota Palembang merupakan media yang disediakan oleh Pemerintah Kota
-								Palembang untuk memberikan kemudahan kepada masyarakat untuk mendapatkan informasi mengenai jadwal kegiatan
-								kepala daerah setiap harinya dan event di Pemerintah Kota</p>
+							<p class="lead text-white mt-3">Kite Jadwalke adalah platform yang disediakan oleh Pemerintah Kabupaten Musi
+								Banyuasin untuk mempermudah masyarakat dalam mendapatkan informasi mengenai jadwal kegiatan kepala daerah setiap
+								harinya serta acara-acara di Kabupaten Musi Banyuasin.</p>
 						</div>
 					@else
 						<div class="col-lg-12 text-center mx-auto mt-12">
@@ -169,176 +209,81 @@
 		<!-- -------- END Content Presentation Docs ------- -->
 	</div>
 	<footer class="footer pt-5 mt-5">
-		{{-- <div class="container">
-			<div class=" row">
+		<div class="container">
+			<div class="row">
 				<div class="col-md-3 mb-4 ms-auto">
 					<div>
-						<a href="https://www.creative-tim.com/product/material-kit">
-							<img src="vendor/assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
+						<a href="#">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Lambang_Kabupaten_Musi_Banyuasin.png"
+								class="mb-3 footer-logo" alt="main_logo">
 						</a>
-						<h6 class="font-weight-bolder mb-4">Material Kit 3</h6>
+						<h6 class="font-weight-bolder mb-4">Kite Jadwalke</h6>
 					</div>
 					<div>
 						<ul class="d-flex flex-row ms-n3 nav">
 							<li class="nav-item">
-								<a class="nav-link pe-1" href="https://www.facebook.com/CreativeTim" target="_blank">
+								<a class="nav-link pe-1" href="https://www.facebook.com/" target="_blank">
 									<i class="fab fa-facebook text-lg opacity-8"></i>
 								</a>
 							</li>
-
 							<li class="nav-item">
-								<a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
+								<a class="nav-link pe-1" href="https://twitter.com/" target="_blank">
 									<i class="fab fa-twitter text-lg opacity-8"></i>
 								</a>
 							</li>
-
 							<li class="nav-item">
-								<a class="nav-link pe-1" href="https://dribbble.com/creativetim" target="_blank">
-									<i class="fab fa-dribbble text-lg opacity-8"></i>
-								</a>
-							</li>
-
-
-							<li class="nav-item">
-								<a class="nav-link pe-1" href="https://github.com/creativetimofficial" target="_blank">
+								<a class="nav-link pe-1" href="https://github.com/" target="_blank">
 									<i class="fab fa-github text-lg opacity-8"></i>
 								</a>
 							</li>
-
-							<li class="nav-item">
-								<a class="nav-link pe-1" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank">
-									<i class="fab fa-youtube text-lg opacity-8"></i>
-								</a>
-							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-6 col-6 mb-4">
+				<div class="col-md-3 col-sm-6 col-6 mb-4">
 					<div>
-						<h6 class="text-sm">Company</h6>
+						<h6 class="text-sm">Contact Us</h6>
 						<ul class="flex-column ms-n3 nav">
 							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">
-									About Us
-								</a>
+								<span class="nav-link">Call Center: +62 711 123 456</span>
 							</li>
-
 							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/templates/free" target="_blank">
-									Freebies
-								</a>
+								<span class="nav-link">Email: support@kitejadwalke.com</span>
 							</li>
-
 							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/templates/premium" target="_blank">
-									Premium Tools
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
-									Blog
-								</a>
+								<span class="nav-link">Alamat: Jl. Kol. Wahid Udin, Serasan Jaya, Kec. Sekayu, Kabupaten Musi Banyuasin,
+									Sumatera Selatan 30711</span>
 							</li>
 						</ul>
 					</div>
 				</div>
-
-				<div class="col-md-2 col-sm-6 col-6 mb-4">
+				{{-- <div class="col-md-3 col-sm-6 col-6 mb-4">
 					<div>
-						<h6 class="text-sm">Resources</h6>
+						<h6 class="text-sm">Quick Links</h6>
 						<ul class="flex-column ms-n3 nav">
 							<li class="nav-item">
-								<a class="nav-link" href="https://iradesign.io/" target="_blank">
-									Illustrations
-								</a>
+								<a class="nav-link" href="{{ route('about') }}">About Us</a>
 							</li>
-
 							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
-									Bits &amp; Snippets
-								</a>
+								<a class="nav-link" href="{{ route('faq') }}">FAQ</a>
 							</li>
-
 							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/affiliates/new" target="_blank">
-									Affiliate Program
-								</a>
+								<a class="nav-link" href="{{ route('contact') }}">Contact</a>
 							</li>
 						</ul>
 					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-6 mb-4">
-					<div>
-						<h6 class="text-sm">Help &amp; Support</h6>
-						<ul class="flex-column ms-n3 nav">
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/contact-us" target="_blank">
-									Contact Us
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/knowledge-center" target="_blank">
-									Knowledge Center
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="https://services.creative-tim.com/?ref=ct-mk2-footer" target="_blank">
-									Custom Development
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
-									Sponsorships
-								</a>
-							</li>
-
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-					<div>
-						<h6 class="text-sm">Legal</h6>
-						<ul class="flex-column ms-n3 nav">
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/knowledge-center/terms-of-service" target="_blank">
-									Terms &amp; Conditions
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/knowledge-center/privacy-policy" target="_blank">
-									Privacy Policy
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.creative-tim.com/license" target="_blank">
-									Licenses (EULA)
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
+				</div> --}}
 				<div class="col-12">
 					<div class="text-center">
 						<p class="text-dark my-4 text-sm font-weight-normal">
 							All rights reserved. Copyright ©
 							<script>
 								document.write(new Date().getFullYear())
-							</script>2025 Material Kit by <a href="https://www.creative-tim.com" target="_blank">Creative
-								Tim</a>.
+							</script> Kite Jadwalke.
 						</p>
 					</div>
 				</div>
 			</div>
-		</div> --}}
+		</div>
 	</footer>
 	<!--   Core JS Files   -->
 	<script src="{{ asset('vendor/assets/js/core/popper.min.js') }}" type="text/javascript"></script>
