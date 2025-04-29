@@ -164,16 +164,24 @@
 															Pimpinan Daerah </h6>
 													</a>
 												</li>
-												<li class="nav-item list-group-item border-0 p-0">
-													<a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ route('standardpelayanan') }}">
-														<h6
-															class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-															Standard Pelayanan </h6>
-													</a>
-												</li>
+
 											</ul>
 										</div>
 									</ul>
+								</li>
+								<li class="nav-item ms-lg-auto">
+									<a class="nav-link nav-link-icon me-2" href="{{ route('berita') }}">
+										<i class="fa fa-github me-1"></i>
+										<p class="d-inline text-sm z-index-1 font-weight-semibold" data-bs-toggle="tooltip"
+											data-bs-placement="bottom">Berita </p>
+									</a>
+								</li>
+								<li class="nav-item ms-lg-auto">
+									<a class="nav-link nav-link-icon me-2" href="{{ route('standardpelayanan') }}">
+										<i class="fa fa-github me-1"></i>
+										<p class="d-inline text-sm z-index-1 font-weight-semibold" data-bs-toggle="tooltip"
+											data-bs-placement="bottom">Standard Pelayanan </p>
+									</a>
 								</li>
 								@if (!auth()->check())
 									<li class="nav-item my-auto ms-3 ms-lg-0">

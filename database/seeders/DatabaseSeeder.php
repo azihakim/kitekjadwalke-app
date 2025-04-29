@@ -15,9 +15,80 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'admin@gmail.com',
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'admin@gmail.com',
+        // ]);
+
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
+        ]);
+        \DB::table('beritas')->insert([
+            'judul' => 'Dummy Berita 1',
+            'isi' => 'Ini adalah konten dummy untuk berita pertama.',
+            'gambar' => 'https://palembang.go.id/uploads/Sekda_Apel_di_Kemuning_676b6e0a9f.jpg',
         ]);
     }
 }

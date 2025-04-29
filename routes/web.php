@@ -24,6 +24,8 @@ Route::get('/pimpinan', function () {
 Route::get('/standardpelayanan', function () {
     return view('profil.standardpelayanan');
 })->name('standardpelayanan');
+Route::get('/berita', [\App\Http\Controllers\BeritaController::class, 'index'])->name('berita');
+Route::get('/berita/{berita}', [\App\Http\Controllers\BeritaController::class, 'show'])->name('berita.show');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
